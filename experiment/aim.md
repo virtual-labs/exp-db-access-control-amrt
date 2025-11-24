@@ -1,1 +1,1 @@
-### Aim of the experiment
+To study and implement three database access control mechanisms—Role-Based Access Control (RBAC) for privilege management through roles, Discretionary Access Control (DAC) for flexible granting and revoking of permissions, and Mandatory Access Control (MAC) for enforcing access based on security classifications and clearance levels—to understand how users, roles, and policies regulate secure access to data
