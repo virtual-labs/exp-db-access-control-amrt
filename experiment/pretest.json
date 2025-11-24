@@ -2,37 +2,105 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "How does Role-Based Access Control (RBAC) simplify privilege management in databases?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "By assigning permissions directly to every user individually.",
+        "b": "By grouping permissions into roles and assigning those roles to users.",
+        "c": "By allowing users to select their own permissions.",
+        "d": "By storing access rights in an external file system."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. Assigning permissions individually increases complexity.",
+        "b": "Correct. RBAC organizes permissions into roles for efficient management.",
+        "c": "Incorrect. RBAC does not allow users to choose permissions.",
+        "d": "Incorrect. RBAC operates at the database level, not the file system."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which scenario best demonstrates the use of RBAC?",
+      "answers": {
+        "a": "Every user has full access to all tables.",
+        "b": "Managers can update reports while interns can only view them.",
+        "c": "All users share one common login.",
+        "d": "All users have identical permissions regardless of job role."
+      },
+      "explanations": {
+        "a": "Incorrect. Full access violates least privilege.",
+        "b": "Correct. RBAC assigns permissions based on job roles.",
+        "c": "Incorrect. Shared logins reduce accountability.",
+        "d": "Incorrect. RBAC provides differentiated access."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which principle is enforced by RBAC to limit unnecessary access?",
+      "answers": {
+        "a": "Data normalization",
+        "b": "Principle of least privilege",
+        "c": "Data redundancy reduction",
+        "d": "Open access principle"
+      },
+      "explanations": {
+        "a": "Incorrect. Normalization is unrelated to access control.",
+        "b": "Correct. RBAC ensures users get only the permissions they need.",
+        "c": "Incorrect. Redundancy relates to storage.",
+        "d": "Incorrect. Access is restricted, not opened."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "How are access rights updated in RBAC when a user changes departments?",
+      "answers": {
+        "a": "The admin reassigns the user to a new role, updating permissions automatically.",
+        "b": "The user must request permissions one by one.",
+        "c": "All old permissions are retained permanently.",
+        "d": "The user must create a new account for the new role."
+      },
+      "explanations": {
+        "a": "Correct. RBAC enables easy role reassignment.",
+        "b": "Incorrect. Manual updates are not needed in RBAC.",
+        "c": "Incorrect. Permissions depend on the current role.",
+        "d": "Incorrect. A single account can be reassigned."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What is a key advantage of RBAC for large organizations?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "It provides scalable control by assigning permissions through roles.",
+        "b": "It allows employees to change their own permissions freely.",
+        "c": "It works without any administrative configuration.",
+        "d": "It automatically performs data encryption."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Correct. RBAC scales well with large user groups.",
+        "b": "Incorrect. Only administrators change permissions.",
+        "c": "Incorrect. Admins define roles and mappings.",
+        "d": "Incorrect. RBAC does not handle encryption."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is a security risk of an incorrectly configured RBAC system?",
+      "answers": {
+        "a": "Users may end up with more privileges than required.",
+        "b": "Database performance may slightly improve.",
+        "c": "All roles will automatically balance their permissions.",
+        "d": "Users will lose access to the system permanently."
+      },
+      "explanations": {
+        "a": "Correct. Misconfigured roles can lead to privilege escalation.",
+        "b": "Incorrect. RBAC issues typically do not affect performance.",
+        "c": "Incorrect. Role permissions must be defined manually.",
+        "d": "Incorrect. Over-permission is more common than total lockout."
+      },
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]

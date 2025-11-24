@@ -2,35 +2,108 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is the main purpose of Role-Based Access Control (RBAC)?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "To assign permissions directly to each user",
+        "b": "To group permissions into roles and assign those roles to users",
+        "c": "To allow unrestricted access to all users",
+        "d": "To disable user accounts automatically"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. RBAC avoids direct permission assignment to simplify access management.",
+        "b": "Correct. RBAC groups permissions into roles and assigns the roles to users.",
+        "c": "Incorrect. RBAC is designed to restrict access based on roles.",
+        "d": "Incorrect. RBAC manages permissions, not account status."
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
+
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Which statement best describes Discretionary Access Control (DAC)?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Access is controlled strictly by security labels and clearance levels",
+        "b": "Users receive permissions only through predefined roles",
+        "c": "The owner of an object can grant and revoke access to others",
+        "d": "Permissions are assigned automatically by the system"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. This describes Mandatory Access Control (MAC).",
+        "b": "Incorrect. This describes RBAC, not DAC.",
+        "c": "Correct. In DAC, the owner decides who gets access using GRANT/REVOKE.",
+        "d": "Incorrect. DAC requires explicit permission decisions by the data owner."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+
+    {
+      "question": "What is the core principle of Mandatory Access Control (MAC)?",
+      "answers": {
+        "a": "Permissions are decided by the data owner",
+        "b": "Access decisions are based on roles defined by administrators",
+        "c": "Access is granted according to security labels and clearance levels",
+        "d": "All users are given the same permissions"
+      },
+      "explanations": {
+        "a": "Incorrect. This describes DAC.",
+        "b": "Incorrect. This describes RBAC.",
+        "c": "Correct. MAC enforces access based on classification and user clearance.",
+        "d": "Incorrect. MAC enforces strict differentiated access rules."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+
+    {
+      "question": "In DAC, what does the WITH GRANT OPTION allow a user to do?",
+      "answers": {
+        "a": "Delete the table permanently",
+        "b": "Grant the same permissions to another user",
+        "c": "Change their security clearance level",
+        "d": "Modify their own user account"
+      },
+      "explanations": {
+        "a": "Incorrect. WITH GRANT OPTION does not allow table deletion.",
+        "b": "Correct. WITH GRANT OPTION allows users to pass granted privileges to others.",
+        "c": "Incorrect. Clearance levels belong to MAC.",
+        "d": "Incorrect. It does not relate to account modification."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+
+    {
+      "question": "Which rule is commonly enforced in MAC systems?",
+      "answers": {
+        "a": "No Read Up and No Write Down",
+        "b": "Users can freely modify privileges",
+        "c": "Permissions depend only on job titles",
+        "d": "All users have equal access"
+      },
+      "explanations": {
+        "a": "Correct. MAC enforces strict rules like 'No Read Up' and 'No Write Down'.",
+        "b": "Incorrect. This belongs to DAC.",
+        "c": "Incorrect. Job-title-based access belongs to RBAC.",
+        "d": "Incorrect. MAC restricts access heavily."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+
+    {
+      "question": "How does RBAC simplify privilege management in large systems?",
+      "answers": {
+        "a": "By allowing users to change their own permissions",
+        "b": "By assigning permissions directly to users individually",
+        "c": "By grouping permissions into roles and reassigning users as needed",
+        "d": "By removing the need for administrators"
+      },
+      "explanations": {
+        "a": "Incorrect. Users cannot change their own permissions.",
+        "b": "Incorrect. RBAC avoids direct assignment to users.",
+        "c": "Correct. RBAC simplifies management by assigning users to roles instead of handling individual privileges.",
+        "d": "Incorrect. Administrators are still needed to define roles."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
