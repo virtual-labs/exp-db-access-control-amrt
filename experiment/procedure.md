@@ -5,6 +5,7 @@
 First, learn the Role-Based Access Control (RBAC) system.
 
 **Click on the RBAC Panel at the top .**
+
  ![Build Roles](./images/step0-RBAC.png)
 ####  Step 1.1 — Build Roles
 
