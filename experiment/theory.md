@@ -7,11 +7,11 @@ Access control in databases refers to the mechanisms that regulate which users a
 The three primary access control models used in database environments are **Role-Based Access Control (RBAC)**, **Discretionary Access Control (DAC)**, and **Mandatory Access Control (MAC)**. Each model implements access restrictions through a different approach and is suitable for different security requirements.
 
 
-##### **1. Role-Based Access Control (RBAC)**
+#### **1. Role-Based Access Control (RBAC)**
 
 Role-Based Access Control (RBAC) manages access by assigning permissions to roles, which are then assigned to users. A role represents a job function, and each role carries a predefined set of permissions.
 
-#### **Key Concepts**
+##### **Key Concepts**
 
 * Permissions are grouped into roles rather than being assigned individually.
 * Users inherit permissions based on the roles they are assigned.
@@ -22,7 +22,7 @@ RBAC reduces administrative complexity by allowing administrators to modify role
 
 
 
-##### **2. Discretionary Access Control (DAC)**
+#### **2. Discretionary Access Control (DAC)**
 
 Discretionary Access Control (DAC) allows the data owner to determine who can access or modify the data. Permissions are typically managed using SQL commands such as `GRANT` and `REVOKE`.
 
@@ -37,7 +37,7 @@ DAC must be carefully administered to prevent unauthorized privilege propagation
 
 
 
-##### **3. Mandatory Access Control (MAC)**
+#### **3. Mandatory Access Control (MAC)**
 
 Mandatory Access Control (MAC) is a strict, policy-driven model where access decisions are enforced based on security classifications assigned to data and clearance levels assigned to users.
 
