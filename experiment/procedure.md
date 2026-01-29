@@ -37,6 +37,7 @@
 ##### **Step 1 — Grant Privileges**
 
 * Open the **Grant Privileges** tab.
+
 ![Grant Privileges](./images/step1-DAC-grant.png)
 * Select the **Granter** (user giving the privilege), typically **Admin**.
 * Select the **Grantee** (user receiving the privilege).
@@ -44,9 +45,10 @@
 * Select the required **Permission** (*SELECT, INSERT, UPDATE, DELETE*).
 * Enable **WITH GRANT OPTION** if the grantee is allowed to share the privilege.
 * Click **Grant** to assign the privilege.
-<img src="./images/step1.1-DAC-grant.png" alt="Test Access" width="75%"/>
+<img src="./images/step1.1-DAC-grant.png" alt="Test Access" width="45%"/>
 
 * The privilege assignment is reflected in the **Privilege Flow**, and the **Activity Log** is updated.
+
 ![Privilege Flow After Grant](./images/step2-DAC-privilege-flow.png)
 
 ##### **Step 2 — Revoke Privileges**
@@ -56,9 +58,11 @@
 * Choose the **Object** associated with the privilege.
 * Select the **Permission** to revoke.
 * Click **Revoke (Cascade)** to remove the privilege.
+
  ![Revoke Privileges](./images/step3-DAC-revoke.png)
 
 * The privilege is revoked from the user, dependent privileges are removed, and the **Activity Log** is updated.
+
 ![Privilege Flow After Revoke](./images/step4-DAC-revoked.png)
 
 ##### **Step 3 — Test & Verify Access**
@@ -68,13 +72,14 @@
 * Choose an **Action** (*SELECT, INSERT, UPDATE, DELETE*).
 * Select the **Object** on which the action is tested.
 * Click **Test Access**.
-<img src="./images/step5-DAC-test-access.png" alt="Test Access" width="85%"/>
+<img src="./images/step5-DAC-test-access.png" alt="Test Access" width="45%"/>
 
 * Observe the result:
 
   * **Access Granted** — The user has the required privilege.
   * **Access Denied** — The user does not have the required privilege.
 * The access result is recorded in the **Activity Log**.
+
   ![Access Result](./images/step6-DAC-access-result.png)
 
 
