@@ -56,7 +56,7 @@
   <li>Select the required <strong>Permission</strong> (<em>SELECT, INSERT, UPDATE, DELETE</em>).</li>
   <li>Enable <strong>WITH GRANT OPTION</strong> if the grantee is allowed to share the privilege.</li>
   <li>Click <strong>Grant</strong> to assign the privilege.<br>
-    <img src="./images/step1.1-DAC-grant.png" alt="Grant Privilege Detail" width="75%">
+    <img src="./images/step1.1-DAC-grant.png" alt="Grant Privilege Detail" width="45%">
   </li>
   <li>The privilege assignment is reflected in the <strong>Privilege Flow</strong>, and the <strong>Activity Log</strong> is updated.<br>
     <img src="./images/step2-DAC-privilege-flow.png" alt="Privilege Flow After Grant" width="75%">
@@ -86,7 +86,7 @@
   <li>Choose an <strong>Action</strong> (<em>SELECT, INSERT, UPDATE, DELETE</em>).</li>
   <li>Select the <strong>Object</strong> on which the action is tested.</li>
   <li>Click <strong>Test Access</strong>.<br>
-    <img src="./images/step5-DAC-test-access.png" alt="Test Access" width="75%">
+    <img src="./images/step5-DAC-test-access.png" alt="Test Access" width="45%">
   </li>
   <li>Observe the result:
     <ul>
