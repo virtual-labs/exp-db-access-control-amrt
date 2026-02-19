@@ -1,0 +1,1 @@
+The objective of this experiment is to understand how database systems control and restrict access to data using access control mechanisms. The outcome of this experiment lies in the ability to configure, manage, and enforce database access control mechanisms, including Role-Based Access Control (RBAC), Discretionary Access Control (DAC), and Mandatory Access Control (MAC).
