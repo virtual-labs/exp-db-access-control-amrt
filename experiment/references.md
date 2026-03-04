@@ -1,10 +1,16 @@
+#### Access Control
 
-1. [What is Role-Based Access Control (RBAC)](https://www.ibm.com/think/topics/rbac)  
+- Karatas, G. & C. [*Survey on Access Control Mechanisms in Cloud Computing*](https://www.riverpublishers.com/journal/journal_articles/RP_Journal_2245-1439_731.pdf). River Publishers.
 
-2. [Role-Based Access Control (RBAC): The Complete Guide](https://frontegg.com/guides/rbac)  
+#### Role-Based Access Control (RBAC)
 
-3. [Understanding Role-Based Access Control (RBAC)](https://pathlock.com/blog/role-based-access-control-rbac/)  
+- [*Role-based access control – Wikipedia*](https://en.wikipedia.org/wiki/Role-based_access_control)
 
-4. [Role-Based Access Control (RBAC) Explained](https://www.fortinet.com/resources/cyberglossary/role-based-access-control)  
+#### Discretionary Access Control (DAC)
 
-5. [What is Role-Based Access Control (RBAC)](https://www.illumio.com/cybersecurity-101/rbac)
+- Kirrane, S. et al. [*Access Control and the Resource Description Framework*](https://www.semantic-web-journal.net/system/files/swj1084.pdf)
+
+#### Mandatory Access Control (MAC)
+
+- [*Bell–LaPadula model – Wikipedia*](https://en.wikipedia.org/wiki/Bell%E2%80%93LaPadula_model)
+- [*Mandatory Access Control – Cornell CS PDF*](https://www.cs.cornell.edu/fbs/publications/chptr.MAC.pdf)

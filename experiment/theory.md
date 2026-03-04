@@ -1,55 +1,60 @@
+#### Access Control in Databases
 
-#### **Access Control in Databases**
+Access control in databases refers to mechanisms that regulate which users are permitted to view, modify, or manage data within a database system. Its purpose is to ensure that data is accessed securely and only by authorized users according to predefined security policies.
 
-
-Access control in databases refers to the mechanisms that regulate which users are allowed to view, modify, or manage data. Its primary purpose is to ensure that data is accessed securely and only by authorized individuals, following predefined rules and security policies. Effective access control protects data integrity, confidentiality, and proper usage within a database system.
-
-The three primary access control models used in database environments are **Role-Based Access Control (RBAC)**, **Discretionary Access Control (DAC)**, and **Mandatory Access Control (MAC)**. Each model implements access restrictions through a different approach and is suitable for different security requirements.
-
-
-#### **1. Role-Based Access Control (RBAC)**
-
-Role-Based Access Control (RBAC) manages access by assigning permissions to roles, which are then assigned to users. A role represents a job function, and each role carries a predefined set of permissions.
-
-##### **Key Concepts**
-
-* Permissions are grouped into roles rather than being assigned individually.
-* Users inherit permissions based on the roles they are assigned.
-* Enforces the **principle of least privilege**, ensuring users only receive the access necessary for their tasks.
-* Improves scalability and simplifies management, especially in large systems.
-
-RBAC reduces administrative complexity by allowing administrators to modify role permissions instead of adjusting permissions for each user individually.
+The three primary access control models used in database environments are **Role-Based Access Control (RBAC)**, **Discretionary Access Control (DAC)**, and **Mandatory Access Control (MAC)**. Each model enforces access restrictions using a different approach and is applied based on specific security requirements.
 
 
 
-#### **2. Discretionary Access Control (DAC)**
+##### 1. Role-Based Access Control (RBAC)
 
-Discretionary Access Control (DAC) allows the data owner to determine who can access or modify the data. Permissions are typically managed using SQL commands such as `GRANT` and `REVOKE`.
+Role-Based Access Control (RBAC) manages access by assigning permissions to roles rather than directly to users. A role represents a specific job function or responsibility within an organization, and each role contains a predefined set of permissions.
 
-##### **Key Concepts**
+###### Key Concepts
 
-* Users can be granted specific privileges such as `SELECT`, `INSERT`, or `UPDATE`.
-* The **WITH GRANT OPTION** allows a user to pass their privileges to others.
-* Offers flexible control but can be less secure due to cascading privilege assignments.
-* Commonly used in environments where fine-grained data sharing is required.
+- Permissions are grouped into roles.
+- Users are assigned roles instead of individual permissions.
+- Users inherit permissions based on their assigned roles.
+- Enforces the **principle of least privilege**, ensuring users receive only the minimum permissions required to perform their tasks.
+- Simplifies administration and improves scalability in large systems.
 
-DAC must be carefully administered to prevent unauthorized privilege propagation.
+RBAC reduces administrative complexity because administrators manage permissions at the role level instead of configuring privileges separately for each user. This model is widely used in enterprise database systems due to its efficiency and structured approach.
 
 
 
-#### **3. Mandatory Access Control (MAC)**
+##### 2. Discretionary Access Control (DAC)
 
-Mandatory Access Control (MAC) is a strict, policy-driven model where access decisions are enforced based on security classifications assigned to data and clearance levels assigned to users.
+Discretionary Access Control (DAC) allows the owner of a database object (such as a table or view) to control access to that object. Permissions are typically granted or revoked using SQL commands such as `GRANT` and `REVOKE`.
 
-##### **Key Concepts**
+###### Key Concepts
 
-* Data objects are labeled with classifications such as *Confidential*, *Secret*, or *Top Secret*.
-* Users are assigned clearance levels corresponding to these classifications.
-* Enforces mandatory rules such as:
+- Specific privileges such as `SELECT`, `INSERT`, `UPDATE`, or `DELETE` can be granted to individual users.
+- The `WITH GRANT OPTION` allows a user to grant their assigned privileges to other users.
+- Provides flexible and fine-grained access control.
+- Privileges can be revoked at any time using the `REVOKE` command.
 
-  * **No Read Up:** Users cannot read data above their clearance level.
-  * **No Write Down:** Users cannot write data to a lower classification level.
-* Typically used in environments requiring robust security, such as defense or government systems.
+Although DAC offers flexibility, it can introduce security risks due to cascading privilege assignments when `WITH GRANT OPTION` is used. If not carefully managed, privileges may propagate beyond the intended scope.
 
-MAC provides strong protection by ensuring that users cannot alter or override system-defined security policies.
+
+##### 3. Mandatory Access Control (MAC)
+
+Mandatory Access Control (MAC) is a strict, policy-driven access control model where access decisions are enforced based on system-defined security classifications and user clearance levels. Unlike DAC, users cannot alter access permissions.
+
+###### Key Concepts
+
+- Data objects are assigned classification labels such as:
+  - Confidential
+  - Secret
+  - Top Secret
+- Users are assigned clearance levels corresponding to these classifications.
+- Access decisions are enforced by the system based on security policy.
+- Users cannot override or delegate permissions.
+
+MAC commonly follows the **Bell-LaPadula security model**, which enforces the following rules:
+
+- **No Read Up** – A user cannot read data at a higher classification level.
+- **No Write Down** – A user cannot write data to a lower classification level.
+
+MAC provides strong security enforcement and is typically used in high-security environments such as military, government, and defense systems.
+
 

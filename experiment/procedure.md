@@ -1,157 +1,99 @@
-<h4>Role-Based Access Control (RBAC)</h4>
+#### Role-Based Access Control (RBAC)
 
-<h5>Step 1 — Build Roles</h5>
+##### Step 1 — Build Roles
 
-<ul>
-  <li>Read the instructions at the top and <strong>drag and drop</strong> the correct permissions into each role.<br>
-    <img src="./images/step1-RBAC.png" alt="Build Roles" width="75%">
-  </li>
-  <li>Click <strong>Assign Permissions to Roles</strong> to validate your setup.<br>
-    A green <strong>Assigned</strong> status indicates a successful configuration.
-  </li>
-  <li>Then click <strong>Next: Assign Roles to Users</strong> to continue.<br>
-    <img src="./images/step2-RBAC.png" alt="Validate Roles" width="75%">
-  </li>
-</ul>
+* Review the available permissions defined by the **Super Admin** to understand what actions they allow.
+* Drag and drop permissions from the pool into the predefined role cards to build each role. (You can also create custom roles by entering a name and clicking **Add Role**).
+  <img src="./images/step1-RBAC.png" alt="Build Roles" width="80%"/>
+* Click "**Assign Permissions to Roles**" to verify your configuration. A green "Completed" status indicates success.
+  <img src="./images/step2-RBAC.png" alt="Validate Roles" width="80%"/>
+* Click "**Next: Assign Roles to Users**" to continue once all roles are correct.
 
-<h5>Step 2 — Assign Roles to Users</h5>
+##### Step 2 — Assign Roles to Users
 
-<ul>
-  <li>Assign the available roles to users based on their <strong>positions and responsibilities</strong>.<br>
-    <img src="./images/step3-RBAC.png" alt="Assign Roles to Users" width="75%">
-  </li>
-  <li>Click <strong>Verify User Roles</strong> to confirm your assignments, then select <strong>Next: Testing Phase</strong> to proceed.<br>
-    <img src="./images/step4-RBAC.png" alt="Validate Assignments" width="75%">
-  </li>
-</ul>
+* Review the users and their job responsibilities.
+* Assign an appropriate role to each user using the dropdown menu. (You can also add a new user from the left panel).
+  <img src="./images/step3-RBAC.png" alt="Assign Roles to Users" width="80%"/>
+* Click "**Verify User Roles**" to check your assignments.
+  <img src="./images/step4-RBAC.png" alt="Validate Assignments" width="80%"/>
+* Click "**Next: Testing Phase**" to continue once all roles are correct.
 
-<h5>Step 3 — Test & Verify Privileges</h5>
+##### Step 3 — Test Access
 
-<ul>
-  <li>In the Testing Phase, <strong>select a user</strong> from the left panel, choose an <strong>action</strong>, and test whether that user has access to perform it.<br>
-    <img src="./images/step5-RBAC.png" alt="Test Access" width="75%">
-  </li>
-  <li>Click <strong>Test Access</strong> and observe the result:
-    <ul>
-      <li><strong>Access Granted</strong> — The user’s role includes the required permission.</li>
-      <li><strong>Access Denied</strong> — The user’s role does not include the required permission.</li>
-    </ul>
-  </li>
-  <li>Review the <strong>Access Log</strong> for details such as the user, assigned role, action, and timestamp.<br>
-    <img src="./images/step6-RBAC.png" alt="Access Log / Result" width="75%">
-  </li>
-</ul>
+* Select a user who has assigned roles.
+* Choose an action from the grid to test the user's access against the **Employee Records** table.
+  <img src="./images/step5-RBAC.png" alt="Test Access" width="80%"/>
+* Click "**Test Access**" to simulate the permission check.
+* Review the result on the **Employee Records** preview panel (which will show 🔓 Access Granted or 🔒 Access Denied) and observe the action details recorded below in the **Access Log**.
+  <img src="./images/step6-RBAC.png" alt="Access Result" width="80%"/>
 
-<h4>Discretionary Access Control (DAC)</h4>
 
-<h5>Step 1 — Grant Privileges</h5>
 
-<ul>
-  <li>Open the <strong>Grant Privileges</strong> tab.<br>
-    <img src="./images/step1-DAC-grant.png" alt="Grant Privileges" width="75%">
-  </li>
-  <li>Select the <strong>Granter</strong> (user giving the privilege), typically <strong>Admin</strong>.</li>
-  <li>Select the <strong>Grantee</strong> (user receiving the privilege).</li>
-  <li>Choose the <strong>Object</strong> (table/resource such as <em>Customers</em> or <em>Orders</em>).</li>
-  <li>Select the required <strong>Permission</strong> (<em>SELECT, INSERT, UPDATE, DELETE</em>).</li>
-  <li>Enable <strong>WITH GRANT OPTION</strong> if the grantee is allowed to share the privilege.</li>
-  <li>Click <strong>Grant</strong> to assign the privilege.<br>
-    <img src="./images/step1.1-DAC-grant.png" alt="Grant Privilege Detail" width="45%">
-  </li>
-  <li>The privilege assignment is reflected in the <strong>Privilege Flow</strong>, and the <strong>Activity Log</strong> is updated.<br>
-    <img src="./images/step2-DAC-privilege-flow.png" alt="Privilege Flow After Grant" width="75%">
-  </li>
-</ul>
+#### Discretionary Access Control (DAC)
 
-<h5>Step 2 — Revoke Privileges</h5>
+##### Step 1 — Grant Privileges
 
-<ul>
-  <li>Navigate to the <strong>Revoke Privileges</strong> tab.</li>
-  <li>Select the <strong>User</strong> whose privilege needs to be removed.</li>
-  <li>Choose the <strong>Object</strong> associated with the privilege.</li>
-  <li>Select the <strong>Permission</strong> to revoke.</li>
-  <li>Click <strong>Revoke (Cascade)</strong> to remove the privilege.<br>
-    <img src="./images/step3-DAC-revoke.png" alt="Revoke Privileges" width="75%">
-  </li>
-  <li>The privilege is revoked from the user, dependent privileges are removed, and the <strong>Activity Log</strong> is updated.<br>
-    <img src="./images/step4-DAC-revoked.png" alt="Privilege Flow After Revoke" width="75%">
-  </li>
-</ul>
+* Open the **Grant Privileges** tab.
 
-<h5>Step 3 — Test & Verify Access</h5>
+  <img src="./images/step1-DAC.png" alt="Grant Privileges" width="80%"/>
+  
+* Select a **Granter** (the user giving the privilege) and a **Grantee** (the user receiving the privilege).
+* Select the target **Object** (e.g., Customers, Orders) and assign one or more **Permissions** (SELECT, INSERT, UPDATE).
+* Enable **WITH GRANT OPTION** if you want the grantee to be able to delegate these permissions to others.
+* Click **Grant** to apply the privileges.
+* The privilege assignment will immediately reflect in the **Privilege Flow** mapping and the **Activity Log**.
+  <img src="./images/step2-DAC.png" alt="Privilege Flow After Grant" width="80%"/>
 
-<ul>
-  <li>Open the <strong>Test Access</strong> tab.</li>
-  <li>Select a <strong>User</strong> to test.</li>
-  <li>Choose an <strong>Action</strong> (<em>SELECT, INSERT, UPDATE, DELETE</em>).</li>
-  <li>Select the <strong>Object</strong> on which the action is tested.</li>
-  <li>Click <strong>Test Access</strong>.<br>
-    <img src="./images/step5-DAC-test-access.png" alt="Test Access" width="45%">
-  </li>
-  <li>Observe the result:
-    <ul>
-      <li><strong>Access Granted</strong> — The user has the required privilege.</li>
-      <li><strong>Access Denied</strong> — The user does not have the required privilege.</li>
-    </ul>
-  </li>
-  <li>The access result is recorded in the <strong>Activity Log</strong>.<br>
-    <img src="./images/step6-DAC-access-result.png" alt="Access Result" width="75%">
-  </li>
-</ul>
+##### Step 2 — Revoke Privileges
 
-<h4>Mandatory Access Control (MAC)</h4>
+* Navigate to the **Revoke Privileges** tab.
+* Select the **User** whose privileges should be removed.
+* Choose the **Object** and select one or more **Permissions** to remove.
+  <img src="./images/step3-DAC.png" alt="Revoke Privileges" width="80%"/>
+* Click **Revoke**. This action naturally cascades, automatically removing any permissions that were passed on by this user.
+* Observe the changes in the **Privilege Flow** and **Activity Log**.
+  <img src="./images/step4-DAC.png" alt="Privilege Flow After Revoke" width="80%"/>
 
-<h5>Step 1 — Assign Security Levels</h5>
+##### Step 3 — Test Access
 
-<ul>
-  <li>Read the instructions displayed at the top of the interface.</li>
-  <li>Drag a <strong>Security Level</strong> from the center panel and drop it onto a <strong>User (Subject)</strong> to assign clearance.</li>
-  <li>Drag a <strong>Security Level</strong> and drop it onto a <strong>Data Object</strong> to assign classification.</li>
-  <li>Ensure each user and data object has an assigned security level.</li>
-  <li>Click <strong>Next: Test Access</strong> to proceed.<br>
-    <img src="./images/step1-MAC-assign-levels.png" alt="Assign Security Levels" width="75%">
-  </li>
-</ul>
+* Open the **Test Access** tab.
+* Select the **User** whose access you want to verify.
+* Select the **Action** (permission) and the target **Object** to test.
+* Click **Verify Access** to check whether the operation is authorized.
+  <img src="./images/step5-DAC.png" alt="Test Access" width="80%"/>
+* Observe the result in the **Activity Log** (Access Granted or Access Denied).
+  <img src="./images/step6-DAC.png" alt="Access Result" width="80%"/>
 
-<h5>Step 2 — Verify Assigned Clearances and Classifications</h5>
 
-<ul>
-  <li>Review the assigned <strong>clearance levels</strong> for all users.</li>
-  <li>Review the assigned <strong>classification levels</strong> for all data objects.</li>
-  <li>Confirm that the visual indicators reflect the correct security hierarchy.</li>
-  <li>The <strong>Activity Log</strong> is updated to record each assignment.<br>
-    <img src="./images/step2-MAC-assigned-levels.png" alt="Assigned Clearances and Classifications" width="75%">
-  </li>
-</ul>
 
-<h5>Step 3 — Test & Verify Access</h5>
+#### Mandatory Access Control (MAC)
 
-<ul>
-  <li>Select a <strong>User</strong> from the <em>Select User (clearance)</em> panel.</li>
-  <li>Select a <strong>Data Object</strong> from the <em>Select Object (classification)</em> panel.</li>
-  <li>Choose an <strong>Action Mode</strong>:
-    <ul>
-      <li><strong>READ</strong> (No Read Up)</li>
-      <li><strong>WRITE</strong> (No Write Down)</li>
-      <li><strong>COMBINED</strong></li>
-    </ul>
-  </li>
-  <li>Click <strong>Test Access</strong> to evaluate the access request.<br>
-    <img src="./images/step3-MAC-test-access.png" alt="Test Access" width="75%">
-  </li>
-</ul>
+##### Step 1 — Introduction to MAC
 
-<h5>Step 4 — View Access Decision</h5>
+* Read the instructions explaining how Clearance and Classification work.
+* Review the core rules of MAC based on the principle of dominance.
 
-<ul>
-  <li>Observe the <strong>Security Ladder Visualization</strong> showing the relative positions of the user and data object.</li>
-  <li>The system displays one of the following results:
-    <ul>
-      <li><strong>Access Granted</strong> — The request satisfies MAC rules.</li>
-      <li><strong>Access Denied</strong> — The request violates MAC rules.</li>
-    </ul>
-  </li>
-  <li>The access decision is recorded in the <strong>Activity Log</strong>.<br>
-    <img src="./images/step4-MAC-access-result.png" alt="MAC Access Result" width="75%">
-  </li>
-</ul>
+  <img src="./images/step1-MAC.png" alt="MAC Introduction" width="50%"/>
+  
+* Click **Next: Assign Security Levels** to enter the assignment view.
+
+##### Step 2 — Assign Security Levels
+
+* Drag a **Security Level** from the top palette and drop it onto a **User** card (to assign their Clearance).
+* Drag a **Security Level** and drop it onto a **Data Object** card (to assign its Classification).
+  <img src="./images/step2-MAC.png" alt="Assign Security Levels" width="80%"/>
+* Ensure every user and data object has an assigned security level.
+  <img src="./images/step3-MAC.png" alt="Assigned Clearances and Classifications" width="80%"/>
+* Click **Next: Test Access** to proceed.
+
+##### Step 3 — Test & Verify Access
+
+* Select a **User** (Clearance) to act as the active subject.
+* The **Secure Object Database** will update to display objects securely properly. If the selected user lacks sufficient clearance, sensitive object names and types are redacted (blurred out).
+* Choose an Action mode (**Read** or **Write**) directly from the **Secure Object Database** table for a target **Data Object** (Classification) or select a combination from the top panels and click **Test Access**.
+  <img src="./images/step4-MAC.png" alt="Test Access" width="80%"/>
+* The system will evaluate the **Access Decision**:
+  * **Read/Write Allowed**: Requires Clearance ≥ Classification.
+* Review the visual access decision (✅ ACCESS GRANTED or ⛔ ACCESS DENIED) and read the explanation.
+* The decision history is recorded in the **Activity Log**.
+  <img src="./images/step5-MAC.png" alt="MAC Access Result" width="80%"/>
