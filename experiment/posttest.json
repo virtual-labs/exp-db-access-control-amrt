@@ -18,7 +18,6 @@
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
-
     {
       "question": "Which statement best describes Discretionary Access Control (DAC)?",
       "answers": {
@@ -36,7 +35,6 @@
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
-
     {
       "question": "What is the core principle of Mandatory Access Control (MAC)?",
       "answers": {
@@ -54,7 +52,6 @@
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
-
     {
       "question": "In DAC, what does the WITH GRANT OPTION allow a user to do?",
       "answers": {
@@ -72,25 +69,23 @@
       "correctAnswer": "b",
       "difficulty": "intermediate"
     },
-
     {
-      "question": "Which rule is commonly enforced in MAC systems?",
+      "question": "What is the primary condition for accessing data in a standard Mandatory Access Control (MAC) system?",
       "answers": {
-        "a": "No Read Up and No Write Down",
-        "b": "Users can freely modify privileges",
-        "c": "Permissions depend only on job titles",
-        "d": "All users have equal access"
+        "a": "A user's security clearance must be greater than or equal to the data's classification level.",
+        "b": "The user must be assigned a role that explicitly contains the required permission.",
+        "c": "The data owner must grant the user permission via a SQL command.",
+        "d": "All users can access data randomly as long as they are authenticated."
       },
       "explanations": {
-        "a": "Correct. MAC enforces strict rules like 'No Read Up' and 'No Write Down'.",
-        "b": "Incorrect. This belongs to DAC.",
-        "c": "Incorrect. Job-title-based access belongs to RBAC.",
-        "d": "Incorrect. MAC restricts access heavily."
+        "a": "Correct. MAC evaluates access by ensuring clearance dominates (is ≥) the data classification.",
+        "b": "Incorrect. This describes RBAC.",
+        "c": "Incorrect. This describes DAC.",
+        "d": "Incorrect. MAC restricts access heavily based on security levels."
       },
       "correctAnswer": "a",
       "difficulty": "intermediate"
     },
-
     {
       "question": "How does RBAC simplify privilege management in large systems?",
       "answers": {
