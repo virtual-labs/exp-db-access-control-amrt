@@ -42,18 +42,17 @@ Mandatory Access Control (MAC) is a strict, policy-driven access control model w
 
 ###### Key Concepts
 
-- Data objects are assigned classification labels such as:
-  - Confidential
-  - Secret
+- Data objects are assigned classification labels, and users are assigned clearance levels. In this simulation, the hierarchy of levels is (from highest to lowest):
   - Top Secret
-- Users are assigned clearance levels corresponding to these classifications.
+  - Secret
+  - Confidential
+  - Public
 - Access decisions are enforced by the system based on security policy.
 - Users cannot override or delegate permissions.
 
-MAC commonly follows the **Bell-LaPadula security model**, which enforces the following rules:
+While MAC often follows strict frameworks like the **Bell-LaPadula security model** (which enforces "No Read Up" and "No Write Down" rules), this simulation implements a **General Mandatory Access Control** model with a unified dominance rule. In this simulation:
 
-- **No Read Up** – A user cannot read data at a higher classification level.
-- **No Write Down** – A user cannot write data to a lower classification level.
+- **Access Rule** – A subject may perform any access operation (Read or Write) **only if** their clearance dominates (is greater than or equal to) the object's classification.
 
 MAC provides strong security enforcement and is typically used in high-security environments such as military, government, and defense systems.
 
