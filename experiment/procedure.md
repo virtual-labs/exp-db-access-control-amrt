@@ -4,7 +4,9 @@
 
 * Review the available permissions defined by the **Super Admin** to understand what actions they allow.
 * Drag and drop permissions from the pool into the predefined role cards to build each role. (You can also create custom roles by entering a name and clicking **Add Role**).
+
   <img src="./images/step1-RBAC.png" alt="Build Roles" width="80%"/>
+
 * Click "**Assign Permissions to Roles**" to verify your configuration. A green "Completed" status indicates success.
   <img src="./images/step2-RBAC.png" alt="Validate Roles" width="80%"/>
 * Click "**Next: Assign Roles to Users**" to continue once all roles are correct.
@@ -22,7 +24,9 @@
 
 * Select a user who has assigned roles.
 * Choose an action from the grid to test the user's access against the **Employee Records** table.
+
   <img src="./images/step5-RBAC.png" alt="Test Access" width="80%"/>
+
 * Click "**Test Access**" to simulate the permission check.
 * Review the result on the **Employee Records** preview panel (which will show 🔓 Access Granted or 🔒 Access Denied) and observe the action details recorded below in the **Access Log**.
   <img src="./images/step6-RBAC.png" alt="Access Result" width="80%"/>
@@ -81,7 +85,9 @@
 
 * Drag a **Security Level** from the top palette and drop it onto a **User** card (to assign their Clearance).
 * Drag a **Security Level** and drop it onto a **Data Object** card (to assign its Classification).
+
   <img src="./images/step2-MAC.png" alt="Assign Security Levels" width="80%"/>
+  
 * Ensure every user and data object has an assigned security level.
   <img src="./images/step3-MAC.png" alt="Assigned Clearances and Classifications" width="80%"/>
 * Click **Next: Test Access** to proceed.
@@ -89,7 +95,7 @@
 ##### Step 3 — Test & Verify Access
 
 * Select a **User** (Clearance) to act as the active subject.
-* The **Secure Object Database** will update to display objects securely properly. If the selected user lacks sufficient clearance, sensitive object names and types are redacted (blurred out).
+* The **Secure Object Database** will update to display objects securely. If the selected user lacks sufficient clearance, sensitive object names and types are redacted (blurred out).
 * Choose an Action mode (**Read** or **Write**) directly from the **Secure Object Database** table for a target **Data Object** (Classification) or select a combination from the top panels and click **Test Access**.
   <img src="./images/step4-MAC.png" alt="Test Access" width="80%"/>
 * The system will evaluate the **Access Decision**:
