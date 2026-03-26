@@ -1,16 +1,17 @@
-#### Access Control
+#### **Access Control**
 
-- Karatas, G. & C. [*Survey on Access Control Mechanisms in Cloud Computing*](https://www.riverpublishers.com/journal/journal_articles/RP_Journal_2245-1439_731.pdf). River Publishers.
+- [Microsoft Learn. *Access Control Overview*](https://learn.microsoft.com/en-us/windows/security/identity-protection/access-control/access-control)
 
-#### Role-Based Access Control (RBAC)
 
-- [*Role-based access control – Wikipedia*](https://en.wikipedia.org/wiki/Role-based_access_control)
+#### **Role-Based Access Control (RBAC)**
 
-#### Discretionary Access Control (DAC)
+- [National Institute of Standards and Technology (NIST). *Role-Based Access Control (RBAC)*](https://csrc.nist.gov/projects/role-based-access-control)
 
-- Kirrane, S. et al. [*Access Control and the Resource Description Framework*](https://www.semantic-web-journal.net/system/files/swj1084.pdf)
+#### **Discretionary Access Control (DAC)**
 
-#### Mandatory Access Control (MAC)
+- [National Institute of Standards and Technology (NIST). *Discretionary Access Control (DAC)*](https://csrc.nist.gov/glossary/term/discretionary_access_control)
 
-- [*Bell–LaPadula model – Wikipedia*](https://en.wikipedia.org/wiki/Bell%E2%80%93LaPadula_model)
-- [*Mandatory Access Control – Cornell CS PDF*](https://www.cs.cornell.edu/fbs/publications/chptr.MAC.pdf)
+
+#### **Mandatory Access Control (MAC)**
+
+- [National Institute of Standards and Technology (NIST). *Mandatory Access Control (MAC)*](https://csrc.nist.gov/glossary/term/mandatory_access_control)
