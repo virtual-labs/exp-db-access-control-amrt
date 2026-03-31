@@ -1,0 +1,107 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "How does Role-Based Access Control (RBAC) simplify privilege management in databases?",
+      "answers": {
+        "a": "By assigning permissions directly to every user individually.",
+        "b": "By grouping permissions into roles and assigning those roles to users.",
+        "c": "By allowing users to select their own permissions.",
+        "d": "By storing access rights in an external file system."
+      },
+      "explanations": {
+        "a": "Incorrect. Assigning permissions individually increases complexity.",
+        "b": "Correct. RBAC organizes permissions into roles for efficient management.",
+        "c": "Incorrect. RBAC does not allow users to choose permissions.",
+        "d": "Incorrect. RBAC operates at the database level, not the file system."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is a primary characteristic of a Discretionary Access Control (DAC) system?",
+      "answers": {
+        "a": "Access rights are determined solely by strict system clearance labels.",
+        "b": "The owner of the data can grant and revoke access permissions to other users.",
+        "c": "Data permissions are permanently fixed and cannot be changed.",
+        "d": "Access is grouped exclusively by organizational job roles."
+      },
+      "explanations": {
+        "a": "Incorrect. This describes Mandatory Access Control (MAC).",
+        "b": "Correct. In DAC, data owners use discretion to manage permissions.",
+        "c": "Incorrect. DAC allows permissions to be changed by data owners.",
+        "d": "Incorrect. Role-based grouping belongs to RBAC."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Mandatory Access Control (MAC) is most likely to be required in which of the following environments?",
+      "answers": {
+        "a": "A collaborative research lab where scientists freely share data.",
+        "b": "A small startup where developers need quick, unrestricted database access.",
+        "c": "A military or government system where strict, hierarchical security policies must be strictly enforced.",
+        "d": "A public blog where anyone can read articles."
+      },
+      "explanations": {
+        "a": "Incorrect. MAC is highly restrictive and not ideal for free sharing.",
+        "b": "Incorrect. MAC lacks the agility required for unrestricted agile environments.",
+        "c": "Correct. MAC enforces strict rules that users cannot bypass, ideal for highly secure environments.",
+        "d": "Incorrect. Public systems do not require MAC."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "How are access rights updated in RBAC when a user changes departments?",
+      "answers": {
+        "a": "The admin reassigns the user to a new role, updating permissions automatically.",
+        "b": "The user must request permissions one by one.",
+        "c": "All old permissions are retained permanently.",
+        "d": "The user must create a new account for the new role."
+      },
+      "explanations": {
+        "a": "Correct. RBAC enables easy role reassignment.",
+        "b": "Incorrect. Manual updates are not needed in RBAC.",
+        "c": "Incorrect. Permissions depend on the current role.",
+        "d": "Incorrect. A single account can be reassigned."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is a key advantage of RBAC for large organizations?",
+      "answers": {
+        "a": "It provides scalable control by assigning permissions through roles.",
+        "b": "It allows employees to change their own permissions freely.",
+        "c": "It works without any administrative configuration.",
+        "d": "It automatically performs data encryption."
+      },
+      "explanations": {
+        "a": "Correct. RBAC scales well with large user groups.",
+        "b": "Incorrect. Only administrators change permissions.",
+        "c": "Incorrect. Admins define roles and mappings.",
+        "d": "Incorrect. RBAC does not handle encryption."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is a security risk of an incorrectly configured RBAC system?",
+      "answers": {
+        "a": "Users may end up with more privileges than required.",
+        "b": "Database performance may slightly improve.",
+        "c": "All roles will automatically balance their permissions.",
+        "d": "Users will lose access to the system permanently."
+      },
+      "explanations": {
+        "a": "Correct. Misconfigured roles can lead to privilege escalation.",
+        "b": "Incorrect. RBAC issues typically do not affect performance.",
+        "c": "Incorrect. Role permissions must be defined manually.",
+        "d": "Incorrect. Over-permission is more common than total lockout."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}
